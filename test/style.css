@@ -1,0 +1,52 @@
+body{
+    margin: 0px;
+}
+
+/* small */
+@media only screen and (max-width:300px) {
+    
+    body{
+        background-color:red;
+        font-size: 5px;
+        display: grid;
+        grid-template-rows: repeat(3,1fr);
+    }
+
+}
+
+/* medium */
+
+@media only screen and (min-width:301px) and (max-width:768px){
+
+    body {
+        background-color: green;
+        font-size: 10px;
+        display: grid;
+        grid-template-areas:  "small small medium"
+                    "large large large ";
+    }
+    #small {
+        grid-area: small;
+    }
+    #medium{
+        grid-area: medium;
+    }
+    #large {
+        grid-area: large;
+    }
+    
+}
+
+/* large */
+
+@media only screen and (min-width:768px) {
+    
+    body{
+        background-color:blue;
+        font-size: 15px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+}
+
